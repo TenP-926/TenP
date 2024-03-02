@@ -1,0 +1,9 @@
+.main{
+    margin: 3% 4% 3% 8%; /*上 右 下 左,viewportに対して*/
+}
+.title, .title-sub{
+    text-align: center;
+}
+.title{
+    margin-bottom: -1.5%;
+}
