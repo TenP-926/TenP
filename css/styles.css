@@ -1,9 +1,55 @@
-.main{
-    margin: 3% 4% 3% 8%; /*上 右 下 左,viewportに対して*/
+html{
+    background-color: #f5f5f5;
 }
+body {
+    margin: 0%;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Noto Sans", "Yu Gothic UI", sans-serif;
+}
+
+main{
+    margin: 0% 10% 3% 10%; /*上 右 下 左,viewportに対して*/
+}
+
 .title, .title-sub{
     text-align: center;
+
 }
+
 .title{
+    font-size: 55px;
+    margin-top: 2%;
     margin-bottom: -1.5%;
+}
+
+.title-sub{
+    font-size: 30px;
+}
+
+header{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: 50px;
+    background-color: #d9e7cb;
+}
+
+.cards{
+    width: 100%;
+    /*background-color: aquamarine; 分かりやすくするために使ってた 意味はない*/
+    display: flex;
+    flex-direction: row; /*子要素の並ぶ向き*/
+    /*flex-wrap: wrap; 折り返し 干渉するし今のところいらない*/
+    justify-content: space-around; /*垂直方向の配置*/
+    align-items: stretch; /*水平方向の配置 初期値*/
+}
+
+.card1, .card2, .card3, .card4{
+    width: calc(100% / 4.8);
+    background-color: bisque; /*後で変えるかも*/
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-radius: 10px; /*角を丸くしてね*/
+    font-size: 23px;
 }
