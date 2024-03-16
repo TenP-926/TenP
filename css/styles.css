@@ -1,5 +1,5 @@
 html{
-    background-color: #f0f8ff  ;
+    background-color: #fefcf4  ;
 }
 body {
     margin: 0%;
@@ -7,7 +7,7 @@ body {
     "Hiragino Sans", "Noto Sans", "Yu Gothic UI", sans-serif;
 }
 
-.main, .main2{
+main{
     margin: 0% 15% 3% 15%; /*上 右 下 左,viewportに対して*/
 }
 
@@ -41,14 +41,9 @@ header{
 }
 
 .cards{
-    margin-right: 5%;
-    margin-left: 5%;
     background-color: aquamarine; /*分かりやすくするために使ってた 意味はない*/
-    display: flex;
-    flex-direction: row; /*子要素の並ぶ向き*/
-    flex-wrap: wrap; /*折り返し 干渉するし今のところいらない*/
-    justify-content: space-around; /*垂直方向の配置*/
-    align-items: stretch; /*水平方向の配置 初期値*/
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
 }
 
 .card1, .card2, .card3, .card4{
