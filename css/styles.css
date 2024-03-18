@@ -1,5 +1,5 @@
 html{
-    background-color: #fefcf4  ;
+    background-color: #eff3e7  ;
 }
 body {
     margin: 0%;
@@ -11,6 +11,16 @@ main{
     margin: 0% 15% 3% 15%; /*上 右 下 左,viewportに対して*/
 }
 /*To-Do:ここをデバイスごとに変える*/
+
+.comment{
+    font-size: 18px;
+}
+
+.text{
+    margin-right: 15%;
+    margin-left: 15%;
+    font-size: 18px;
+}
 
 
 .title, .title-sub{
@@ -26,6 +36,7 @@ main{
 
 .title-sub{
     font-size: 30px;
+    margin-bottom: -10px;
 }
 
 .notice{
@@ -34,16 +45,52 @@ main{
     font-size: 18px;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*共通header*/
+
+ul{
+    list-style: none;
+    height: 50px;
+    display: flex;/*ここじゃないとだめ*/
+}
+
+li{
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+li:hover{
+    text-decoration: underline;
+}
+
 header{
     width: 100%;
     padding: 0px;
     margin: 0px;
     height: 50px;
     background-color: #d9e7cb;
+    display: flex;
 }
 
+.header-TenP{
+    font-size: 30px;
+    margin-left: 5px;
+    margin-top: auto; 
+    margin-bottom: auto;
+}
+
+.header-TenP:hover{
+    text-decoration: underline;
+}
+
+/*共通header終*/
+
 .cards{
-    background-color: aquamarine; /*分かりやすくするために使ってた 意味はない*/
+    /*background-color: aquamarine; 分かりやすくするために使ってた 意味はない*/
     display: grid;
     grid-template-columns: repeat(4,minmax(0,1fr));
     grid-template-rows: 150px;
@@ -51,19 +98,22 @@ header{
 }
 
 .card1, .card2, .card3, .card4{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 150px;
     width: 100%;
-    background-color: bisque; /*後で変える*/
+    background-color: #9dd67d; /* https://m3.material.io/styles/color/roles Material You Desginになりそうな色*/
     text-align: center;
-    border-radius: 10px; /*角を丸くしてね*/
+    border-radius: 15px; /*角を丸くしてね*/
     font-size: 23px;
     margin: 0px;
     text-decoration: none;
     color: inherit;
+    transition: background-color 0.4s linear;
 }
+
+.card1:hover, .card2:hover, .card3:hover, .card4:hover{
+    background-color: #b8f397;
+}
+/*アンダーラインがhover時にじゅわーってなるあれ、実装したいなぁ*/
 
 
 .Atag{
@@ -72,6 +122,34 @@ header{
     justify-content: center;
     height: 150px;
     width: 100%;
-    text-decoration: none;
-    color: inherit;
+}
+
+.TenP-animation{
+    padding-left: 95%; /*100%にするとよくないけど、95%もよくないのも分かってる*/
+    white-space: nowrap;
+    font-size: 25px;
+    animation-name: TenP;
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+/*参考: https://webparts.cman.jp/string/scroll/ */
+
+@keyframes TenP{
+from{
+    transform: translateX(-150%)
+}
+to{
+    transform: translateX(0%);
+}
+}
+
+footer{
+    width: 100%;
+    background-color: #b8ccad;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
