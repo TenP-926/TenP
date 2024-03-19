@@ -1,7 +1,8 @@
 html{
-    background-color: #eff3e7  ;
+    background-color: #eff3e7;
+    color: #000000;
 }
-body {
+body{
     margin: 0%;
     font-family: "Segoe UI", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", "Noto Sans", "Yu Gothic UI", sans-serif;
@@ -12,31 +13,39 @@ main{
 }
 /*To-Do:ここをデバイスごとに変える*/
 
-.comment{
+.text{
     font-size: 18px;
 }
 
-.text{
+.text1{
     margin-right: 15%;
     margin-left: 15%;
     font-size: 18px;
 }
 
-
-.title, .title-sub{
-    text-align: center;
-
+.title{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100px;
+    width: 100%;
 }
 
-.title{
+
+
+.title-text{
     font-size: 55px;
-    margin-top: 2%;
-    margin-bottom: -32px;
+    margin: 0px;
+    padding-right: 20px;
+    align-items: flex-end;
 }
 
 .title-sub{
     font-size: 30px;
-    margin-bottom: -10px;
+    margin: 0px;
+    padding-bottom: 5px;
 }
 
 .notice{
@@ -51,43 +60,48 @@ a{
 }
 
 /*共通header*/
-
-ul{
-    list-style: none;
-    height: 50px;
-    display: flex;/*ここじゃないとだめ*/
-}
-
-li{
-    padding-left: 15px;
-    font-size: 16px;
-}
-
-li:hover{
-    text-decoration: underline;
-}
+/*全部display:flexで楽ちん!*/
 
 header{
     width: 100%;
     padding: 0px;
-    margin: 0px;
     height: 50px;
     background-color: #d9e7cb;
     display: flex;
 }
 
 .header-TenP{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
     font-size: 30px;
     margin-left: 5px;
-    margin-top: auto; 
-    margin-bottom: auto;
+    margin-right: 10px;
+    align-items: center;
+    transition: color 0.2s linear;
 }
 
-.header-TenP:hover{
-    text-decoration: underline;
+header ul{
+    list-style: none;
+    height: 50px;
+    display: flex;/*ここじゃないとだめ*/
+    margin: 0px;
+    align-items: center;
+    padding: 0px;
 }
 
-/*共通header終*/
+header li{
+    padding-left: 15px;
+    font-size: 17px;
+    transition: color 0.2s linear;
+}
+
+.header-TenP:hover, header li:hover{
+    /* text-decoration: underline; */
+    color: #006400;
+}
+
+/* //共通header */
 
 .cards{
     /*background-color: aquamarine; 分かりやすくするために使ってた 意味はない*/
@@ -114,7 +128,6 @@ header{
     background-color: #b8f397;
 }
 /*アンダーラインがhover時にじゅわーってなるあれ、実装したいなぁ*/
-
 
 .Atag{
     display: flex;
@@ -146,10 +159,53 @@ to{
 }
 }
 
+/*共通footer*/
+
+body{
+    display: flex; /*全部flex☆*/
+    flex-direction: column; /*縦に並べてね だからfooterが下にくる*/
+    min-height: 100vh;
+}
+
+
 footer{
     width: 100%;
-    background-color: #b8ccad;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    background-color: #e2e8d9;
+    margin: auto 0px 0px 0px;
+    padding: 0px;
 }
+
+.ul{
+    display: flex;
+}
+
+.footer-ul1{
+    padding: 0px;
+    margin-left: 15%;
+}
+
+.footer-ul1, .footer-ul2, .footer-ul3{
+    list-style: none;
+
+}
+
+footer li{
+    color: #3e3e3e;
+    font-size: 16px;
+    padding: 1px;
+}
+
+footer li:hover{
+    text-decoration: underline;
+}
+
+.footer-end{
+    font-size: 16px;
+    padding-left: 15%;
+    margin: 0px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: #3e3e3e;
+}
+
+/* //共通footer */
