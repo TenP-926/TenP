@@ -1,63 +1,30 @@
-html{
+/* ### 共通CSS ### */
+/* 共通設定 */
+body{
     background-color: #eff3e7;
     color: #000000;
-}
-body{
     margin: 0%;
-    font-family: "Segoe UI", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", "Noto Sans", "Yu Gothic UI", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
 }
+@font-face {
+    font-family: "Noto Sans JP";
+    src: url("../font/Noto_Sans_JP.woff2");
+    font-display: swap;
+}
+/*Noto Sans VariableFontをttfからwoff2に変換して使用しています*/
 
 main{
     margin: 0% 15% 3% 15%; /*上 右 下 左,viewportに対して*/
 }
-/*To-Do:ここをデバイスごとに変える*/
 
-.text{
-    font-size: 18px;
+@media screen and (max-width: 767px){
+    main{
+        margin: 0% 5% 0% 5%;
+    }
 }
 
-.text1{
-    margin-right: 15%;
-    margin-left: 15%;
-    font-size: 18px;
-}
-
-.title{
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 100px;
-    width: 100%;
-}
-
-
-
-.title-text{
-    font-size: 55px;
-    margin: 0px;
-    padding-right: 20px;
-    align-items: flex-end;
-}
-
-.title-sub{
-    font-size: 30px;
-    margin: 0px;
-    padding-bottom: 5px;
-}
-
-.notice{
-    color: #8b0000 ;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
+/* //共通設定 */
 
 /*共通header*/
 /*全部display:flexで楽ちん!*/
@@ -79,6 +46,13 @@ header{
     margin-right: 10px;
     align-items: center;
     transition: color 0.2s linear;
+    font-weight: 450;
+}
+
+@media screen and (max-width: 767px){
+    .header-TenP{
+        font-size: 23px;
+    }
 }
 
 header ul{
@@ -96,68 +70,19 @@ header li{
     transition: color 0.2s linear;
 }
 
+@media screen and (max-width: 767px){
+    header li{
+        padding-left: 5px;
+        font-size: 16px;
+    }
+}
+
 .header-TenP:hover, header li:hover{
     /* text-decoration: underline; */
     color: #006400;
 }
 
 /* //共通header */
-
-.cards{
-    /*background-color: aquamarine; 分かりやすくするために使ってた 意味はない*/
-    display: grid;
-    grid-template-columns: repeat(4,minmax(0,1fr));
-    grid-template-rows: 150px;
-    column-gap: 20px; /*端末ごとにここを変えたほうがいい*/
-}
-
-.card1, .card2, .card3, .card4{
-    height: 150px;
-    width: 100%;
-    background-color: #9dd67d; /* https://m3.material.io/styles/color/roles Material You Desginになりそうな色*/
-    text-align: center;
-    border-radius: 15px; /*角を丸くしてね*/
-    font-size: 23px;
-    margin: 0px;
-    text-decoration: none;
-    color: inherit;
-    transition: background-color 0.4s linear;
-}
-
-.card1:hover, .card2:hover, .card3:hover, .card4:hover{
-    background-color: #b8f397;
-}
-/*アンダーラインがhover時にじゅわーってなるあれ、実装したいなぁ*/
-
-.Atag{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-    width: 100%;
-}
-
-.TenP-animation{
-    padding-left: 95%; /*100%にするとよくないけど、95%もよくないのも分かってる*/
-    white-space: nowrap;
-    font-size: 25px;
-    animation-name: TenP;
-    animation-duration: 7.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
-}
-
-/*参考: https://webparts.cman.jp/string/scroll/ */
-
-@keyframes TenP{
-from{
-    transform: translateX(-150%)
-}
-to{
-    transform: translateX(0%);
-}
-}
 
 /*共通footer*/
 
@@ -186,7 +111,18 @@ footer{
 
 .footer-ul1, .footer-ul2, .footer-ul3{
     list-style: none;
+    margin-right: 20px;
+    padding: 0px;
+}
 
+@media screen and (max-width: 767px){
+    .footer-ul1, .footer-ul2, .footer-ul3{
+        margin-right: 5px;
+    }
+    
+    .footer-ul1{
+        margin-left: 1%;
+    }
 }
 
 footer li{
@@ -208,4 +144,151 @@ footer li:hover{
     color: #3e3e3e;
 }
 
+@media screen and (max-width: 767px){
+    .footer-end{
+        padding-left: 1%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    footer span{
+        display: inline-block;
+    }
+}
+
 /* //共通footer */
+/* ### //共通CSS ### */
+
+.text{
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.text1{
+    margin-right: 15%;
+    margin-left: 15%;
+    font-size: 18px;
+}
+
+.title{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100px;
+    width: 100%;
+}
+
+h1{
+    font-weight: 600;
+}
+
+h2{
+    font-weight: 500;
+}
+
+.title-text{
+    font-size: 55px;
+    margin: 0px;
+    padding-right: 20px;
+    align-items: flex-end;
+}
+
+.title-sub{
+    font-size: 30px;
+    margin: 0px;
+    padding-bottom: 5px;
+}
+
+@media screen and (max-width: 767px){
+    .title-text{
+        font-size: 45px;
+    }
+    .title-sub{
+        font-size: 23px;
+    }
+}
+
+.notice{
+    color: #8b0000 ;
+    font-size: 16px;
+    text-decoration: line-through;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.cards{
+    /*background-color: aquamarine; 分かりやすくするために使ってた 意味はない*/
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    grid-template-rows: 150px;
+    column-gap: 20px;
+}
+
+@media screen and (max-width: 767px){
+    .cards{
+        column-gap: 5px;
+    }
+}
+
+.card1, .card2, .card3, .card4{
+    height: 150px;
+    width: 100%;
+    background-color: #9dd67d; /* https://m3.material.io/styles/color/roles Material You Desginになりそうな色*/
+    text-align: center;
+    border-radius: 15px; /*角を丸くしてね*/
+    font-size: 23px;
+    margin: 0px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.4s linear;
+}
+
+.card1:hover, .card2:hover, .card3:hover, .card4:hover{
+    background-color: #b8f397;
+}
+
+@media screen and (max-width: 767px){
+    .card3{
+        font-size: 16px;
+    }
+}
+
+/*アンダーラインがhover時にじゅわーってなるあれ、実装したいなぁ*/
+
+.Atag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+}
+
+.TenP-animation{
+    padding-left: 98%;
+    white-space: nowrap;
+    font-size: 25px;
+    animation-name: TenP;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+/*参考: https://webparts.cman.jp/string/scroll/ */
+
+@keyframes TenP{
+from{
+    transform: translateX(-150%)
+}
+to{
+    transform: translateX(0%);
+}
+}
