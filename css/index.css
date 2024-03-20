@@ -63,6 +63,14 @@ h2{
     margin-bottom: 0px;
 }
 
+.notice-a{
+    color: #0033cc;
+}
+
+.notice-a:hover{
+    text-decoration: underline;
+}
+
 .cards{
     /*background-color: aquamarine; 分かりやすくするために使ってた 意味はない*/
     display: grid;
