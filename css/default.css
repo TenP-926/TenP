@@ -57,8 +57,14 @@ main a{
 
 .text{
     font-size: 16px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 0px;
+    line-height: 1.6; /*自分の感覚で値決めたけど、ここどんくらいの値がベストなんだろう...*/
+}
+
+@media screen and (max-width: 767px){
+    .text{
+        margin-bottom: 7.5px;
+    }
 }
 
 .text2{
@@ -82,7 +88,7 @@ main a{
     transition: 0.3s linear;
 }
 
-main a:hover{
+main a:hover, .home-a:hover{
     color: #2b95a8;
     text-decoration: underline;
 }
@@ -90,4 +96,10 @@ main a:hover{
 .neko{
     height: 200px;
     width: 200px;
+}
+
+.text-line{
+    text-decoration: line-through;
+    margin: 0px;
+    line-height: 1.6;
 }
