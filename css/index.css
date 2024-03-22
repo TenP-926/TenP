@@ -25,6 +25,8 @@ a{
     color: inherit;
 }
 
+
+
 .title{
     padding: 0px;
     margin: 0px;
@@ -75,9 +77,11 @@ h2{
 
 .notice-a{
     color: #0033cc;
+    transition: 0.3s linear;
 }
 
 .notice-a:hover{
+    color: #2b95a8;
     text-decoration: underline;
 }
 
