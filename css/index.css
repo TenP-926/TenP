@@ -1,3 +1,19 @@
+body{
+    display: flex; /*全部flex☆*/
+    flex-direction: column; /*縦に並べてね だからfooterが下にくる*/
+    min-height: 100vh;
+}
+
+main{
+    margin: 0% 15% 3% 15%; /*上 右 下 左,viewportに対して*/
+}
+
+@media screen and (max-width: 767px){
+    main{
+        margin: 0% 5% 10% 5%;
+    }
+}
+
 .text{
     font-size: 16px;
     margin-top: 5px;

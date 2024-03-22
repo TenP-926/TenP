@@ -15,15 +15,7 @@ body{
 }
 /*Noto Sans VariableFontをwoff2に変換して使用*/
 
-main{
-    margin: 0% 15% 3% 15%; /*上 右 下 左,viewportに対して*/
-}
-
-@media screen and (max-width: 767px){
-    main{
-        margin: 0% 5% 10% 5%;
-    }
-}
+/* まずcommon.cssにmainのmarginを指定すべきではなかったので移植 */
 
 /* //共通設定 */
 
@@ -107,7 +99,7 @@ body{
 footer{
     width: 100%;
     background-color: #e2e8d9;
-    margin: auto 0px 0px 0px;
+    margin: auto 0px 0px 0px; /* autoいじるとfooterが浮くからだめ */
     padding: 0px;
 }
 
