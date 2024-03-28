@@ -11,6 +11,39 @@ main{
     }
 }
 
+/*text関連の設定 崩れたらここを見ろ*/
+main p{
+    font-size: 16px;
+    margin: 0px;
+    line-height: 1.6; /*自分の感覚で値決めたけど、ここどんくらいの値がベストなんだろう...*/
+    font-weight: 400;
+}
+
+@media screen and (max-width: 767px){
+    main p{
+        margin-bottom: 7.5px;
+    }
+}
+
+.text-topspace{
+    padding-top: 10px;
+}
+
+.text2{
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.text-bold{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.text-line{
+    text-decoration: line-through;
+}
 
 main a{
     text-decoration: none;
@@ -33,22 +66,19 @@ main a{
 .link{
     display: flex;
     align-items: center;
+    padding-top: 7.5px;
+}
+
+@media screen and (max-width: 767px){
+.link p{
+    margin-bottom: 0px;
+}
 }
 
 .link-left{
-    padding-right: 10px;
+    padding: 0px 7.5px 0px 7.5px;
 }
 
-.link-text{
-    padding-right: 10px;
-    color: #0033cc;
-    transition: 0.3s linear;
-}
-
-.link-text:hover{
-    color: #2b95a8;
-    text-decoration: underline;
-}
 
 .title{
     font-weight: 600;
@@ -58,42 +88,11 @@ main a{
     border-bottom: 4px solid #006e54;
 }
 
-.subtitle{
+main h2{
     border-left: 7px solid #00a381;
     padding-left: 10px;
     padding-top: 7.5px;
     font-size: 30px;
-    font-weight: 500;
-}
-
-.text{
-    font-size: 16px;
-    margin: 0px;
-    line-height: 1.6; /*自分の感覚で値決めたけど、ここどんくらいの値がベストなんだろう...*/
-}
-
-@media screen and (max-width: 767px){
-    .text{
-        margin-bottom: 7.5px;
-    }
-}
-
-.text-topspace{
-    font-size: 16px;
-    margin: 0px;
-    line-height: 1.6;
-    padding-top: 10px;
-}
-
-.text2{
-    font-weight: 500;
-    font-size: 20px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.text-bold{
-    font-size: 18px;
     font-weight: 500;
 }
 
@@ -114,12 +113,6 @@ main a:hover, .home-a:hover{
 .neko{
     height: 200px;
     width: 200px;
-}
-
-.text-line{
-    text-decoration: line-through;
-    margin: 0px;
-    line-height: 1.6;
 }
 
 /* こっから下のやつ実装するの夢だった 叶えられて大満足 */
@@ -159,12 +152,18 @@ main a:hover, .home-a:hover{
     font-weight: 450;
     font-size: 18px;
     margin: 0px;
-    padding: 10px 20px 15px 10px; /* 上 右 下 左 そろそろ覚えたい */
+    padding: 10px 15px 15px 15px; /* 上 右 下 左 そろそろ覚えたい */
     line-height: 1.6;
 }
 
 .link-bottom{
     display: flex;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 767px){
+    .link-bottom p{
+        margin-bottom: 0px;
+    }
 }
