@@ -153,7 +153,6 @@ main a:hover, .home-a:hover{
     font-size: 18px;
     margin: 0px;
     padding: 10px 15px 15px 15px; /* 上 右 下 左 そろそろ覚えたい */
-    line-height: 1.6;
 }
 
 .link-bottom{
