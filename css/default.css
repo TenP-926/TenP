@@ -12,10 +12,13 @@ main{
 }
 
 /*text関連の設定 崩れたらここを見ろ*/
+main{
+    line-height: 1.6; /*自分の感覚で値決めたけど、ここどんくらいの値がベストなんだろう...*/
+}
+
 main p{
     font-size: 16px;
     margin: 0px;
-    line-height: 1.6; /*自分の感覚で値決めたけど、ここどんくらいの値がベストなんだろう...*/
     font-weight: 400;
 }
 
@@ -63,22 +66,23 @@ main a{
     align-items: center;
 }
 
-.link{
+/*ぱんくず*/
+.pankuzu{
     display: flex;
     align-items: center;
     padding-top: 7.5px;
 }
 
 @media screen and (max-width: 767px){
-.link p{
+.pankuzu span{
     margin-bottom: 0px;
 }
 }
 
-.link-left{
+.pankuzu-right{
     padding: 0px 7.5px 0px 7.5px;
 }
-
+/* //ぱんくず */
 
 .title{
     font-weight: 600;
@@ -120,11 +124,21 @@ main a:hover, .home-a:hover{
 .note{
     background-color: #f5deb3;
     border-radius: 15px;
-    width: 100%;
+    width: fit-content;
+}
+
+.dark-note{
+    background-color: #c0c0c0;
+    border-radius: 10px;
     width: fit-content;
 }
 
 /*警告用カラーコード: #ffdad6*/
+
+.dark-note-text{
+    margin: 0px;
+    padding: 10px 15px 15px 15px; /* 上 右 下 左 そろそろ覚えたい */
+}
 
 .errorsvg{
     width: 30px;
@@ -166,3 +180,5 @@ main a:hover, .home-a:hover{
         margin-bottom: 0px;
     }
 }
+
+
