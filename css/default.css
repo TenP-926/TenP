@@ -94,6 +94,7 @@ main a{
 
 main h2{
     border-left: 7px solid #00a381;
+    border-bottom: 1px solid #d3d3d3;
     padding-left: 10px;
     padding-top: 7.5px;
     font-size: 30px;
