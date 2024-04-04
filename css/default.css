@@ -1,5 +1,35 @@
 /* サイトトップページ(index.html)以外でほぼ共通して使えそうなCSSをまとめた */
 /* 物置の作品以外はこれでいけそう */
+/*ダークモード関連*/
+:root{
+    --main-text: #000000;
+    --main-atagcolor: #0033cc;
+    --main-bgcolor: #f2f5ea;
+    --h2: #d3d3d3;
+    --note-bg: #f5deb3;
+    --note-dark-bg: #c0c0c0;
+}
+@media (prefers-color-scheme: dark){
+    :root{
+        --main-text: #e3e3e3;
+        --main-atagcolor: #2b95a8;
+        --main-bgcolor: #0f0f0f;
+        --h2: #696969;
+        --note-bg: #8b4513;
+        --note-dark-bg: #33362f;
+    }
+}
+
+body{
+    color: var(--main-text);
+    background-color: var(--main-bgcolor);
+}
+main a{
+    color: var(--main-atagcolor);
+    transition: 0.3s linear;
+    text-decoration: none;
+}
+
 
 main{
     margin: 0% 15% 0% 15%; /*上 右 下 左,viewportに対して*/
@@ -44,18 +74,18 @@ main p{
     font-weight: 500;
 }
 
-.text-line{
-    text-decoration: line-through;
+.bold{
+    font-weight: 500;
 }
 
-main a{
-    text-decoration: none;
-    color: inherit;
+.text-line{
+    text-decoration: line-through;
 }
 
 .home-icon{
     width: 30px;
     height: 30px;
+    display: block;
 }
 /* Google Material Icons: https://fonts.google.com/icons */
 
@@ -89,7 +119,7 @@ main a{
 
 main h2{
     border-left: 7px solid #00a381;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid var(--h2);
     padding-left: 10px;
     padding-top: 7.5px;
     font-size: 30px;
@@ -98,11 +128,6 @@ main h2{
 
 main li{
     font-size: 16px;
-}
-
-main a{
-    color: #0033cc;
-    transition: 0.3s linear;
 }
 
 main a:hover, .home-a:hover{
@@ -118,13 +143,13 @@ main a:hover, .home-a:hover{
 /* こっから下のやつ実装するの夢だった 叶えられて大満足 */
 
 .note{
-    background-color: #f5deb3;
     border-radius: 15px;
     width: fit-content;
+    background-color: var(--note-bg);
 }
 
 .dark-note{
-    background-color: #c0c0c0;
+    background-color: var(--note-dark-bg);
     border-radius: 10px;
     width: fit-content;
 }

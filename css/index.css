@@ -1,4 +1,23 @@
+:root{
+    --main-text: #000000;
+    --main-atagcolor: #0033cc;
+    --main-bgcolor: #f2f5ea;
+    --card: #9dd67d;
+    --card-hover: #b8f397;
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --main-text: #e3e3e3;
+        --main-atagcolor: #2b95a8;
+        --main-bgcolor: #0f0f0f;
+        --card: #212d23;
+        --card-hover: #3e4a35;
+    }
+}
 body{
+    background-color: var(--main-bgcolor);
+    color: var(--main-text);
     display: flex; /*全部flex☆*/
     flex-direction: column; /*縦に並べてね だからfooterが下にくる*/
     min-height: 100vh;
@@ -85,7 +104,7 @@ h2{
 }
 
 .notice-a{
-    color: #0033cc;
+    color: var(--main-atagcolor);
     transition: 0.3s linear;
 }
 
@@ -114,7 +133,7 @@ h2{
 .card1, .card2, .card3, .card4{
     height: 150px;
     width: 100%;
-    background-color: #9dd67d; /* https://m3.material.io/styles/color/roles Material You Desginになりそうな色*/
+    background-color: var(--card);
     text-align: center;
     border-radius: 15px; /*角を丸くしてね*/
     font-size: 23px;
@@ -125,7 +144,7 @@ h2{
 }
 
 .card1:hover, .card2:hover, .card3:hover, .card4:hover{
-    background-color: #b8f397;
+    background-color: var(--card-hover);
 }
 
 @media screen and (max-width: 767px){
