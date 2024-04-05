@@ -217,4 +217,13 @@ main a:hover, .home-a:hover{
     }
 }
 
+figure{
+    padding: 0;
+    margin: 0;
+}
 
+.Shikisima{
+    padding-top: 15px;
+    width: 100%;
+    height: 100%;
+}
