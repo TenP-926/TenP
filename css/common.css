@@ -28,9 +28,9 @@ body{
 
 @media (prefers-color-scheme: dark){
     :root{
-        --header-bg: #0b2800;
+        --header-bg: #0b2800;/*#0b2800*/
         --header-text: #e3e3e3;
-        --footer-bg: #1a1c18;
+        --footer-bg: #1e1e1e;
         --footer-text: #e3e3e3;
     }
 }
@@ -39,8 +39,6 @@ header{
     background-color: var(--header-bg);
     color: var(--header-text);
 }
-
-
 
 header a{
     text-decoration: none;
@@ -153,6 +151,11 @@ footer li{
     padding: 1px;
 }
 
+@media screen and (max-width: 767px){
+    footer li{
+        padding: 3.5px;
+    }
+}
 footer li:hover{
     text-decoration: underline;
 }

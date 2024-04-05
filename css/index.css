@@ -1,17 +1,19 @@
 :root{
     --main-text: #000000;
     --main-atagcolor: #0033cc;
+    --main-red: #8b0000;
     --main-bgcolor: #f2f5ea;
-    --card: #9dd67d;
-    --card-hover: #b8f397;
+    --card: #9dd67d;/*#9dd67d*/
+    --card-hover: #b8f397;/*#b8f397*/
 }
 
 @media (prefers-color-scheme: dark){
     :root{
         --main-text: #e3e3e3;
-        --main-atagcolor: #2b95a8;
+        --main-atagcolor: #3ea6ff;/*#3ea6ff*/
+        --main-red: #ff4d4d;
         --main-bgcolor: #0f0f0f;
-        --card: #212d23;
+        --card: #323d2d;/*#212d23*/
         --card-hover: #3e4a35;
     }
 }
@@ -58,6 +60,7 @@ a{
 .title{
     padding: 0px;
     margin: 0px;
+    margin-bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -96,7 +99,7 @@ h2{
 }
 
 .notice{
-    color: #8b0000 ;
+    color: var(--main-red) ;
     font-size: 16px;
     text-decoration: line-through;
     margin-top: 10px;
