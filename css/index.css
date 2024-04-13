@@ -42,6 +42,25 @@ main{
     margin: 0px;
 }
 
+.text a{
+    color: var(--main-atagcolor);
+    transition: 0.3s linear;
+}
+.text a:hover{
+    text-decoration: underline;
+    color: #2b95a8;
+}
+
+.text-bold{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.text-line{
+    text-decoration: line-through;
+}
+
 .text-animeTenP{
     margin: 0px 0px 0px 15%;
 }

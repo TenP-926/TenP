@@ -11,7 +11,7 @@
 }
 @media (prefers-color-scheme: dark){
     .material-symbols-outlined{
-        color: #e3e3e3
+        color: #e3e3e3;
     }
 }
 
@@ -86,8 +86,8 @@ main p{
 }
 
 .text-bold{
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .bold{
