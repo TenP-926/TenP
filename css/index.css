@@ -42,6 +42,11 @@ main{
     margin: 0px;
 }
 
+@media screen and (max-width: 767px){
+    main .text{
+        padding-bottom: 17.5px;
+    }
+}
 .text a{
     color: var(--main-atagcolor);
     transition: 0.3s linear;
