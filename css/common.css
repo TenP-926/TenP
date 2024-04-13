@@ -151,11 +151,6 @@ footer li{
     padding: 1px;
 }
 
-@media screen and (max-width: 767px){
-    footer li{
-        padding: 3.5px;
-    }
-}
 footer li:hover{
     text-decoration: underline;
 }
