@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="東京メトロ線の列車運行情報を表示します。/ Train status information of Tokyo Metro">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" type="text/css" href="../css/Nodarkmode/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/Nodarkmode/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/trainfo.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-16x16.png">
+    <link rel="manifest" href="../icon/manifest.json">
+    <link rel="mask-icon" href="../icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icon/apple-touch-icon.png">
+    <!-- https://realfavicongenerator.net/ -->
+    <script src="../scripts/trainfo.js" defer></script>
+    <title>列車運行情報 | TenP</title>
+</head>
+<body>
+    <body>
+        <!--共通header-->
+        <header>
+            <p class="header-TenP"><a href="../index.html">点P</a></p>
+            <nav>
+            <ul>
+                <li><a href="../blog/index.html">ブログ</a></li>
+                <li><a href="index.html">物置</a></li>
+                <li><a href="../about/profile.html">プロフィール</a></li>
+                <li><a href="../about/about_site.html">サイトについて</a></li>
+            </ul>
+            </nav>
+        </header>
+        <!--//共通header-->
+        <main>
+        <!-- ぱんくず -->
+        <div class="breadcrumbs">
+            <a href="../index.html"><span class="material-symbols-outlined">home</span></a>
+            <div class="right-arrow">
+                <span><a href="../index.html">ホーム</a></span><span><a href="index.html">物置</a></span>
+                東京メトロ 列車運行情報
+            </div>
+        </div>
+        <!-- //ぱんくず -->
+        <h1 class="title">東京メトロ 列車運行情報</h1>
+        <p class="loadtimedisplay"><span class="material-symbols-outlined">info</span><span id="loadtime">データ取得中...</span>時点の情報です。60秒ごとに再読み込みします。</p>
+        <!--2路線のかたまり-->
+        <div class="route2">
+            <div class="route" id="ginza">
+                <div class="routename">
+                    <img class="tokyometro-linesymbol" src="../images/TokyoMetroLineSymbol/G.webp" alt="東京メトロ銀座線">
+                    <p>銀座線</p><!--<span id="ginzasta"></span>-->
+                </div>
+                <p id="ginzainfo">データ取得中...</p>
+                </div>
+                    <div class="route" id="marunouchi">
+                        <div class="routename">
+                            <img class="tokyometro-linesymbol" src="../images/TokyoMetroLineSymbol/M.webp" alt="東京メトロ丸ノ内線">
+                            <p>丸ノ内線</p>
+                        </div>
+                        <p id="marunouchiinfo">データ取得中...</p>
+                </div>
+            </div>
+            <!--//2路線のかたまり-->
+            <div class="route2">
+                <div class="route" id="hibiya">
+                <div class="routename">
+                    <img class="tokyometro-linesymbol" src="../images/TokyoMetroLineSymbol/H.webp" alt="東京メトロ日比谷線">
+                    <p>日比谷線</p>
+                </div>
+                <p id="hibiyainfo">データ取得中...</p>
+                </div>
+                    <div class="route" id="tozai">
+                        <div class="routename">
+                            <img class="tokyometro-linesymbol" src="../images/TokyoMetroLineSymbol/T.webp" alt="東京メトロ東西線">
+                            <p>東西線</p><!--<span id="tozaista"></span>-->
+                        </div>
+                        <p id="tozaiinfo">データ取得中...</p>
+                </div>
+            </div>
+            <!--//2路線のかたまり-->
+            <div class="route2">
+                <div class="route" id="chiyoda">
+                <div class="routename">
+                    <img class="tokyometro-linesymbol" src="../images/TokyoMetroLineSymbol/C.webp" alt="東京メトロ千代田線">
+                    <p>千代田線</p>
+                </div>
+                <p id="chiyodainfo">データ取得中...</p>
+                </div>
+                    <div class="route" id="yurakucho">
+                        <div class="routename">
+                            <img class="tokyometro-linesymbol" src="../images/TokyoMetroLineSymbol/Y.webp" alt="東京メトロ有楽町線">
+                            <p>有楽町線</p>
+                        </div>
+                        <p id="yurakuchoinfo">データ取得中...</p>
+                </div>
+            </div>
+            <!--//2路線のかたまり-->
+            <div class="route2">
+                <div class="route" id="hanzomon">
+                <div class="routename">
+                    <img class="tokyometro-linesymbol" src="../images/TokyoMetroLineSymbol/Z.webp" alt="東京メトロ半蔵門線">
+                    <p>半蔵門線</p>
+                </div>
+                <p id="hanzomoninfo">データ取得中...</p>
+                </div>
+                    <div class="route" id="nanboku">
+                        <div class="routename">
+                            <img class="tokyometro-linesymbol" src="../images/TokyoMetroLineSymbol/N.webp" alt="東京メトロ南北線">
+                            <p>南北線</p>
+                        </div>
+                        <p id="nanbokuinfo">データ取得中...</p>
+                </div>
+            </div>
+            <!--//2路線のかたまり-->
+            <div class="route" id="fukutoshin">
+                <div class="routename">
+                    <img class="tokyometro-linesymbol" src="../images/TokyoMetroLineSymbol/F.webp" alt="東京メトロ副都心線">
+                    <p>副都心線</p>
+                </div>
+                <p id="fukuoshininfo">データ取得中...</p>
+                </div>
+            <div class="note">
+                <p class="top">本サイトが利用する公共交通データは、<a href="https://www.odpt.org/" target="_blank">公共交通オープンデータセンター</a>において提供されるものです。</p>
+                <p>公共交通事業者(<a href="https://www.tokyometro.jp/index.html" target="_blank">東京メトロ様</a>)により提供されたデータを元にしていますが、必ずしも正確・完全なものとは限りません。本サイトの表示内容について、公共交通事業者への直接の問合せは行わないでください。</p>
+                <p>本サイトに関するお問い合わせは、以下のフォームにお願いします。</p>
+                <p class="bottom"><a href="https://forms.gle/pWLFzmYX31TLPBAv9" target="_blank" rel="noopener noreferrer">お問い合わせフォーム(Google フォーム)</a></p>
+            </div>
+            <div class="link-bottom">
+                <a href="index.html"><span class="material-symbols-outlined">arrow_back</span></a><a class="margin-right" href="index.html">物置トップページに戻る</a>
+                <a href="../index.html"><span class="material-symbols-outlined">home</span>
+                <p class="link-text">ホームに戻る</a></p>
+            </div>
+        </main>
+        <!--共通footer-->
+        <footer>
+        <div class="ul">
+        <ul class="footer-ul1">
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="blog/index.html">ブログ</a></li>
+            <li><a href="tools/index.html">物置</a></li>
+            <li><a href="about/profile.html">プロフィール</a></li>
+            <li><a href="about/about_site.html"><span>このサイトに</span><span>ついて</span></a></li>
+        </ul>
+        <ul class="footer-ul2">
+            <li><a href="https://twitter.com/Num_k_" target="_blank" rel="noopener noreferrer">Twitter(自称:X)</a></li>
+            <li><a href="https://github.com/TenP-926" target="_blank" rel="noopener noreferrer">Github</a></li>
+            <li>Discord @TenP_256</li>
+        </ul>
+        <ul class="footer-ul3">
+            <li><a href="terms.html">利用規約</a></li>
+            <li><a href="#"><span>プライバシー</span><span>ポリシー</a></span></li>
+            <li><a href="https://forms.gle/pWLFzmYX31TLPBAv9" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
+        </ul>
+        </div>
+        <p class="footer-end">© 2024 点P All rights reserved.</p>
+        </footer>
+        <!--//共通footer-->
+</body>
+</html>

@@ -9,12 +9,13 @@
     'GRAD' 0,
     'opsz' 24
 }
+/*
 @media (prefers-color-scheme: dark){
     .material-symbols-outlined{
         color: #e3e3e3;
     }
 }
-
+*/
 
 /*ダークモード関連*/
 :root{
@@ -26,7 +27,7 @@
     --note-dark-bg: #c0c0c0;
     --red: #b22222;
 }
-@media (prefers-color-scheme: dark){
+/*@media (prefers-color-scheme: dark){
     :root{
         --main-text: #e3e3e3;
         --main-atagcolor: #3ea6ff;
@@ -36,7 +37,7 @@
         --note-dark-bg: #33362f;
         --red: #ff4500;
     }
-}
+}*/
 
 body{
     color: var(--main-text);
@@ -107,11 +108,6 @@ main p{
     text-decoration: line-through;
 }
 
-.home-icon{
-    width: 30px;
-    height: 30px;
-    display: block;
-}
 /* Google Material Icons: https://fonts.google.com/icons */
 
 /*ぱんくず*/
@@ -242,3 +238,5 @@ figure{
     margin-top: 25px;
     padding-top: 25px;
 }
+
+

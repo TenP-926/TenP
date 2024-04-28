@@ -25,16 +25,16 @@ body{
     --footer-bg: #e2e8d9;
     --footer-text: #3e3e3e;
 }
-
+/*
 @media (prefers-color-scheme: dark){
     :root{
-        --header-bg: #0b2800;/*#0b2800*/
+        --header-bg: #0b2800;
         --header-text: #e3e3e3;
         --footer-bg: #1e1e1e;
         --footer-text: #e3e3e3;
     }
-}
-
+}*/
+/*ダークモード対応面倒なので一旦保留*/
 header{
     background-color: var(--header-bg);
     color: var(--header-text);

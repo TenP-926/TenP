@@ -1,0 +1,92 @@
+/*とれいんふぉ*/
+:root{
+    --ginza: #f0e68c;
+    --marunouchi: #f09391;
+    --hibiya: #d3d3d3;
+    --tozai: #87ceeb;
+    --chiyoda: #90ee90;
+    --yurakucho: #deb887;
+    --hanzomon: #d8bfd8;
+    --nanboku: #08cebd;
+    --fukutoshin: #cd853f;
+}
+
+.tokyometro-linesymbol{
+    width: 40px;
+    height: 40px;
+}
+.loadtimedisplay{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.route2{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+.route{
+    border-radius: 10px;
+    width: 50%;
+}
+.routename{
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 10px 10px;
+}
+.route p{
+    padding: 0 15px 15px 15px;
+}
+.routename p{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0 0 0 5px;
+}
+#ginza{
+    background-color: var(--ginza);
+}
+#marunouchi{
+    background-color: var(--marunouchi);
+}
+#hibiya{
+    background-color: var(--hibiya);
+}
+#tozai{
+    background-color: var(--tozai);
+}
+#chiyoda{
+    background-color: var(--chiyoda);
+}
+#yurakucho{
+    background-color: var(--yurakucho);
+}
+#hanzomon{
+    background-color: var(--hanzomon);
+}
+#nanboku{
+    background-color: var(--nanboku);
+}
+#fukutoshin{
+    background-color: var(--fukutoshin);
+    margin-bottom: 15px;
+}
+.note p{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.note{
+    background-color: #dcdcdc;
+    border-radius: 10px;
+    width: fit-content;
+}
+.top{
+    padding-top: 15px;
+}
+.bottom{
+    padding-bottom: 15px;
+}
+.margin-right{
+    margin-right: 10px;
+}
