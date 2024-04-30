@@ -1,6 +1,5 @@
 //とれいんふぉ
 
-
 //html内の要素をidで取得
 const ginzahtml = document.getElementById("ginzainfo");
 const marunouchihtml = document.getElementById("marunouchiinfo")

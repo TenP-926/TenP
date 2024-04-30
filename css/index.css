@@ -113,6 +113,10 @@ h2{
     padding-bottom: 5px;
 }
 
+.title-sub::before{
+    content: "- ";
+}
+
 @media screen and (max-width: 767px){
     .title-text{
         font-size: 45px;

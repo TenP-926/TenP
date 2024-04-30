@@ -1,6 +1,7 @@
 /* サイトトップページ(index.html)以外でほぼ共通して使えそうなCSSをまとめた */
 /* 物置の作品以外はこれでいけそう */
 .material-symbols-outlined {
+    user-select: none;
     color: #000000;
     font-size: 27px;
     font-variation-settings:
