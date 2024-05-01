@@ -69,12 +69,12 @@ fetch(odpt_trainfo)
 
     //dateから時間をパーツごとに抽出
     const year = date.getFullYear();
-    const month = date.getMonth();
+    let month = date.getMonth();
     const day = date.getDate();
     const hour = date.getHours();
     const minute = date.getMinutes();
     const second = date.getSeconds();
-
+    month = month + 1; //取得する月が何故か1月前なので1足してやる
     const formatdate = `${year}/${month}/${day} ${hour}時${minute}分${second}秒` //パーツを組み合わせて日本語形式の時間表記にする
     loadtimehtml.textContent = formatdate; //htmlに反映
     }
