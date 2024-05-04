@@ -72,18 +72,3 @@
     background-color: var(--fukutoshin);
     margin-bottom: 15px;
 }
-.note p{
-    padding-left: 15px;
-    padding-right: 15px;
-}
-.note{
-    background-color: #dcdcdc;
-    border-radius: 10px;
-    width: fit-content;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.margin-right{
-    margin-right: 10px;
-}

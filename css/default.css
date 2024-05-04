@@ -243,3 +243,23 @@ figure{
     margin-top: 25px;
     padding-top: 25px;
 }
+
+.odpt-notice{
+    background-color: var(--note-dark-bg);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0 15px 0;
+}
+
+.odpt-notice-flex{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.odpt-notice-flex p{
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 3px;
+}

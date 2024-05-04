@@ -1,0 +1,14 @@
+/* このcssでdefault.cssのダークモード設定をオーバーライドする*/
+.material-symbols-outlined{
+    color: #000000;
+}
+
+:root{
+    --main-text: #000000;
+    --main-atagcolor: #0033cc;
+    --main-bgcolor: #f2f5ea;
+    --h2: #d3d3d3;
+    --note-bg: #f5deb3;
+    --note-dark-bg: #c0c0c0;
+    --red: #b22222;
+}
