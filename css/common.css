@@ -8,6 +8,9 @@ body, html{
     font-weight: 400;
     display: block;
 }
+head{
+    display: none;
+}
 @font-face {
     font-family: "Noto Sans JP";
     src: url("https://tenp-926.github.io/TenP/font/Noto_Sans_JP.woff2");

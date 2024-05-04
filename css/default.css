@@ -245,7 +245,7 @@ figure{
 }
 
 .odpt-notice{
-    background-color: var(--note-dark-bg);
+    background-color: #dcdcdc;
     border-radius: 10px;
     padding: 15px;
     margin: 15px 0 15px 0;
