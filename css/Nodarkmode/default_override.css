@@ -6,13 +6,12 @@
 :root{
     --main-text: #000000;
     --main-atagcolor: #0033cc;
+    --atagcolor2: #0033cc;
     --main-bgcolor: #f2f5ea;
+    --note-dark-bg: #d7eaf8;
     --h2: #d3d3d3;
     --note-bg: #f5deb3;
-    --note-dark-bg: #c0c0c0;
     --red: #b22222;
 }
 
-.odpt-notice{
-    background-color: #dcdcdc;
-}
+

@@ -21,20 +21,22 @@
 :root{
     --main-text: #000000;
     --main-atagcolor: #0033cc;
+    --atagcolor2: #0033cc;
     --main-bgcolor: #f2f5ea;
     --h2: #d3d3d3;
     --note-bg: #f5deb3;
-    --note-dark-bg: #c0c0c0;
+    --note-dark-bg: #d7eaf8;
     --red: #b22222;
 }
 @media (prefers-color-scheme: dark){
     :root{
         --main-text: #e3e3e3;
         --main-atagcolor: #3ea6ff;
+        --atagcolor2: #75b6e7;
         --main-bgcolor: #0f0f0f;
         --h2: #696969;
-        --note-bg: #8b4513;
-        --note-dark-bg: #33362f;
+        --note-bg: #004173;
+        --note-dark-bg: #091f2c;
         --red: #ff4500;
     }
 }
@@ -249,6 +251,11 @@ figure{
     border-radius: 10px;
     padding: 15px;
     margin: 15px 0 15px 0;
+}
+
+.odpt-notice a{
+    color: var(--atagcolor2);
+    font-weight: 550;
 }
 
 .odpt-notice-flex{
