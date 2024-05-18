@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="点Pのホームページ。ギリギリを攻める人。">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" type="text/css" href="../../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/blog.css">
+    <script src="../../scripts/blog.js" defer></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../icon/favicon-16x16.png">
+    <link rel="manifest" href="../../icon/manifest.json">
+    <link rel="mask-icon" href="../../icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../icon/apple-touch-icon.png">
+    <!-- https://realfavicongenerator.net/ -->
+    <title>Windows Update解体新書 | TenP</title>
+</head>
+<body>
+    <!--共通header-->
+    <header>
+        <p class="header-TenP"><a href="../../index.html">点P</a></p>
+        <nav>
+        <ul>
+            <li><a href="../index.html">ブログ</a></li>
+            <li><a href="../../tools/index.html">物置</a></li>
+            <li><a href="../../about/profile.html">プロフィール</a></li>
+            <li><a href="../../about/about_site.html">サイトについて</a></li>
+        </ul>
+        </nav>
+    </header>
+    <!--//共通header-->
+    <main>
+        <!-- ぱんくず -->
+        <div class="breadcrumbs">
+            <a href="../../index.html"><span class="material-symbols-outlined">home</span></a>
+            <div class="right-arrow">
+                <span><a href="../../index.html">ホーム</a></span>
+                <span><a href="../index.html">ブログ</a></span>
+                Windows Update 解体新書
+            </div>
+        </div>
+        <!-- //ぱんくず -->
+        <h1 class="title">Windows Update 解体新書</h1>
+        <div class="note">
+            <div class="note-flex">
+            <span class="material-symbols-outlined">error</span>
+            <p>注:</p>
+            </div>
+            <p class="note-text">書き途中です！適当に眺めるかブラウザバックを推奨します！</p>
+        </div>
+        <h2>Windows Updateとは</h2>
+        <p>Microsoftが提供する、Windows製品へのアップデートを指します。</p>
+        <p>サポート期間中のバージョンのWindowsや他のMicrosoft製品について更新プログラムが配信されます。</p>
+        <p>Windows10や11では、設定=>Windows Update=>更新プログラムのチェック という操作をすることで、インターネットから自動的に製品に必要な最新のアップデートを拾ってきてくれます。</p>
+        <p>また、<a href="https://www.catalog.update.microsoft.com/" target="_blank">Microsoft Update カタログ</a>から手動で適用したい更新プログラムのインストローラーをダウンロードすることもできます。</p>
+        <p>ここからダウンロードする場合、適用したい更新プログラムのKB番号(KBから始まる数字の文字列)を事前に<a href="https://learn.microsoft.com/ja-jp/windows/release-health/" target="_blank">リリースノート</a>から調べる必要があり、ビット数(64ビット or 32ビット or arm)にも注意する必要があります。</p>
+        <h2>提供される更新プログラムの種類</h2>
+        <p>設定>Windows Update>更新の履歴 を見ると、以下のように更新プログラムが分類されていることが分かります。</p>
+        <ol>
+            <li>機能更新プログラム</li>
+            <li>品質更新プログラム</li>
+            <li>定義更新プログラム</li>
+            <li>ドライバー更新プログラム</li>
+            <li>その他の更新プログラム</li>
+        </ol>
+        <p>ここでは、それぞれについて少し深掘りします。なお、<span class="bold">クリックして展開できます。</span></p>
+        <details id="details1">
+            <summary><span class="material-symbols-outlined" id="change-text1">add</span>機能更新プログラム</summary>
+            <div class="content">
+                <p>大規模なアップデート(アップグレード)です。Windowsのバージョンが変わります。毎年9月から10月あたりにあります。昔は年2回ありました。</p>
+                <p>例) Windows10 22H2 → Windows11 22H2 , Windows11 22H2→ Windows11 23H2</p>
+                <p>一般に、多くの新機能が追加されますが、<a href="https://atmarkit.itmedia.co.jp/ait/articles/2211/30/news009.html" target="_blank">されなかったりもします</a>。</p>
+                <p>OSをほぼ再インストールするような形なため、適用には長時間かかります。最近はかからないもの(EKB方式)もあります。</p>
+                <p>大規模なアップデートで、不具合がある可能性が高いためか、リリース後すぐに自動アップデートされることはほぼありません。</p>
+            </div>
+        </details>
+        <details id="details2">
+            <summary><span class="material-symbols-outlined" id="change-text2">add</span>品質更新プログラム</summary>
+            <div class="content">
+                <p>大きく分けて5種類あります。</p>
+                <p class="bold">1. Windowsの月例セキュリティ更新プログラム(Cリリース)</p>
+                <p>毎月第2水曜日(日本時間)にある、Windowsのセキュリティアップデートです。</p>
+                <p>脆弱性を修正するため、素早く適用する必要があります。リリース後自動的に適用されます。</p>
+                <p>後述する、Bリリースでの機能追加やバグ修正を適用していない場合はここで適用されます。</p>
+                <p class="bold">2. Windowsの月例更新プログラムのプレビュー(Bリリース)</p>
+                <p>Cリリースから次のCリリースまでの間にある、Windowsの非セキュリティアップデートです。</p>
+                <p>細かい機能の追加やバグ修正が含まれます。オプションであるため、自動では適用されません。</p>
+                <p>セキュリティアップデートを含まないため、急いで適用する必要はありません。</p>
+                <p class="bold">3. .NETのセキュリティ更新プログラム</p>
+                <p>Cリリースと同時にリリースされます。.NET(Windowsでアプリを動かすために必要なもの)のセキュリティ更新です。ない月もあります。</p>
+                <p>脆弱性を修正するため、素早く適用する必要があります。リリース後自動的に適用されます。</p>
+                <p>標準搭載されている.NETに適用されるほか、ユーザーがインストールしたバージョンのアップデートも自動検出し適用します。</p>
+                <p class="bold">4. .NETの更新プログラムのプレビュー</p>
+                <p>Bリリースと同時にリリースされる非セキュリティ更新です。バグ修正が含まれます。自動で適用されません</p>
+                <p>適用しない場合、上述のセキュリティ更新の際にこの更新の内容が適用されます。</p>
+                <p>3と4はBリリースとCリリースの.NET版という理解でおｋです。</p>
+                <p class="bold">5. その他</p>
+                <p>Windows REのセキュリティ更新や、Microsoft Update Health Toolsなどのよくわからない製品向けの更新が自動で適用されます。</p>
+                <p>正直よく分かりません。</p>
+            </div>
+        </details>
+        <details id="details3">
+            <summary><span class="material-symbols-outlined" id="change-text3">add</span>定義更新プログラム</summary>
+            <div class="content">
+                <p>Windows Defenderという、標準のウイルス対策ソフトで、ウイルスをスキャンするときに使われる定義を自動更新します。</p>
+                <p>PCの中にあるファイルの中身が、この定義と比べられ、一致する場合ウイルスとして検出する、といった仕組みです。</p>
+                <p>日々進化するウイルスに対応できるよう、1日に何回もリリースされます。</p>
+            </div>
+        </details>
+        <details  id="details4">
+            <summary><span class="material-symbols-outlined" id="change-text4">add</span>ドライバー更新プログラム</summary>
+            <div class="content">
+                <p>Windows8ごろから導入された、PCに必要な最新のドライバーを自動で発見してインストールする機能です。</p>
+                <p>よくパソコンの使い始めにお世話になります。必要なドライバーを自動で当ててくれるのでかなりありがたいです。</p>
+                <p>ただし、たまに変なドライバーや古いものを勝手に適用します。</p>
+            </div>
+        </details>
+        <details  id="details5">
+            <summary><span class="material-symbols-outlined" id="change-text5">add</span>その他の更新プログラム</summary>
+            <div class="content">
+                <p>Bリリースの時にリリースされる「悪意のあるソフトウェアの削除ツール」の更新や、「Windows 構成の更新プログラム」が該当します。</p>
+                <p>前者は、既に感染しているウイルスを削除するためのもので、検索バーに"mrt"と入力すると実行できます。</p>
+                <p>しかし、より高機能かつ頻繫に更新される、他のウイルス対策ソフトを使ったほうがいいです。<a href="https://support.microsoft.com/ja-jp/topic/windows-%E6%82%AA%E6%84%8F%E3%81%AE%E3%81%82%E3%82%8B%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E5%89%8A%E9%99%A4%E3%83%84%E3%83%BC%E3%83%AB-%E3%81%A7%E7%89%B9%E5%AE%9A%E3%81%AE%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0#:~:text=MSRT%20%E3%81%AF%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E5%AF%BE%E7%AD%96%E8%A3%BD%E5%93%81%E3%81%AB%E4%BB%A3%E3%82%8F%E3%82%8B%E3%82%82%E3%81%AE%E3%81%A7%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%20%E3%81%93%E3%81%AE%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AF%E3%80%81%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AB%E6%97%A2%E3%81%AB%E6%84%9F%E6%9F%93%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E3%83%84%E3%83%BC%E3%83%AB%E3%81%A7%E3%81%99%E3%80%82%20%E3%81%9D%E3%81%AE%E3%81%9F%E3%82%81%E3%80%81%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88%E3%81%A7%E3%81%AF%E3%80%81%E6%9C%80%E6%96%B0%E3%81%AE%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E5%AF%BE%E7%AD%96%E8%A3%BD%E5%93%81%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%A6%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E5%BC%B7%E3%81%8F%E6%8E%A8%E5%A5%A8%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" target="_blank">公式が言ってるんだから間違いない</a></p>
+                <p>後者は後ほど取り上げる予定です。Windows11の新機能です。</p>
+            </div>
+        </details>
+        <h2>仮締め</h2>
+        <p>オチがない、、、</p>
+        <p>あとで足します。</p>
+        <div class="link-bottom">
+            <a href="../../index.html"><span class="material-symbols-outlined">home</span></a>
+            <a href="../../index.html"><p class="link-text">ホームに戻る</p></a>
+        </div>
+    </main>
+    <!--共通footer-->
+    <footer>
+    <div class="ul">
+    <ul class="footer-ul1">
+        <li><a href="../../index.html">ホーム</a></li>
+        <li><a href="../index.html">ブログ</a></li>
+        <li><a href="../../tools/index.html">物置</a></li>
+        <li><a href="../../about/profile.html">プロフィール</a></li>
+        <li><a href="../../about/about_site.html"><span>このサイトに</span><span>ついて</span></a></li>
+    </ul>
+    <ul class="footer-ul2">
+        <li><a href="https://twitter.com/Num_k_" target="_blank" rel="noopener noreferrer">Twitter(自称:X)</a></li>
+        <li><a href="https://github.com/TenP-926" target="_blank" rel="noopener noreferrer">Github</a></li>
+        <li>Discord @TenP_256</li>
+    </ul>
+    <ul class="footer-ul3">
+        <li><a href="../../terms.html">利用規約</a></li>
+        <li><a href="../../privacy_policy.html"><span>プライバシー</span><span>ポリシー</span></a></li>
+        <li><a href="https://forms.gle/pWLFzmYX31TLPBAv9" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
+    </ul>
+    </div>
+    <p class="footer-end">© 2024 点P All rights reserved.</p>
+    </footer>
+    <!--//共通footer-->
+</body>
+</html>

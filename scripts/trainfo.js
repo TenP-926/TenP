@@ -18,6 +18,27 @@ const ginzastahtml = document.getElementById("ginzasta")
 
 // 取得するJSONのURL
 const odpt_trainfo = "https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=98159df1a7d1b5c333e283b48f1349d0df838ba291407f9f1808b64919813cfc";
+const g_url = fetch("https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=98159df1a7d1b5c333e283b48f1349d0df838ba291407f9f1808b64919813cfc&odpt:railway=odpt.Railway:TokyoMetro.Ginza");
+const m_url = fetch("https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=98159df1a7d1b5c333e283b48f1349d0df838ba291407f9f1808b64919813cfc&odpt:railway=odpt.Railway:TokyoMetro.Marunouchi");
+const h_url = fetch("https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=98159df1a7d1b5c333e283b48f1349d0df838ba291407f9f1808b64919813cfc&odpt:railway=odpt.Railway:TokyoMetro.Hibiya");
+const t_url = fetch("https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=98159df1a7d1b5c333e283b48f1349d0df838ba291407f9f1808b64919813cfc&odpt:railway=odpt.Railway:TokyoMetro.Tozai");
+const c_url = fetch("https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=98159df1a7d1b5c333e283b48f1349d0df838ba291407f9f1808b64919813cfc&odpt:railway=odpt.Railway:TokyoMetro.Chiyoda");
+const y_url = fetch("https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=98159df1a7d1b5c333e283b48f1349d0df838ba291407f9f1808b64919813cfc&odpt:railway=odpt.Railway:TokyoMetro.Yurakucho");
+const z_url = fetch("https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=98159df1a7d1b5c333e283b48f1349d0df838ba291407f9f1808b64919813cfc&odpt:railway=odpt.Railway:TokyoMetro.Hanzomon");
+const n_url = fetch("https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=98159df1a7d1b5c333e283b48f1349d0df838ba291407f9f1808b64919813cfc&odpt:railway=odpt.Railway:TokyoMetro.Nanboku");
+const f_url = fetch("https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=98159df1a7d1b5c333e283b48f1349d0df838ba291407f9f1808b64919813cfc&odpt:railway=odpt.Railway:TokyoMetro.Fukutoshin");
+
+console.log(g_url)
+
+
+function ginzanew(){
+  const g_url = fetch("https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=98159df1a7d1b5c333e283b48f1349d0df838ba291407f9f1808b64919813cfc&odpt:railway=odpt.Railway:TokyoMetro.Ginza");
+g_url
+.then(response => response.json())
+console.log()
+
+}
+
 
 // Fetch APIを使用してJSONデータを非同期で読み込む
 fetch(odpt_trainfo)

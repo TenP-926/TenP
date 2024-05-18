@@ -22,7 +22,7 @@
     --main-text: #000000;
     --main-atagcolor: #0033cc;
     --atagcolor2: #0033cc;
-    --main-bgcolor: #f2f5ea;
+    --main-bgcolor: #f3f5ef;
     --h2: #d3d3d3;
     --note-bg: #f5deb3;
     --note-dark-bg: #d7eaf8;
@@ -103,7 +103,7 @@ main p{
 }
 
 .bold{
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .text-line{
@@ -141,7 +141,7 @@ main p{
     font-size: 40px;
     padding-bottom: 5px;
     margin: 0px;
-    border-bottom: 4px solid #006e54;
+    border-bottom: 4px solid hsl(166, 100%, 22%);
 }
 
 main h2{
@@ -269,4 +269,7 @@ figure{
     font-size: 20px;
     font-weight: 500;
     padding-left: 3px;
+}
+figure{
+    margin-bottom: 15px;
 }

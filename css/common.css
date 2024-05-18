@@ -20,6 +20,14 @@ head{
 
 /* まずcommon.cssにmainのmarginを指定すべきではなかったので移植 */
 
+
+@media screen and (max-width: 767px){
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* //共通設定 */
 
 /*共通header*/

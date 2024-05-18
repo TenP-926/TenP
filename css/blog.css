@@ -1,0 +1,78 @@
+:root{
+    --marker: "#9ad6a9";
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --marker: "#088247";
+    }
+}
+
+details{
+    background-color: #00331b;
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: 15px;
+}
+
+summary{
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    background-color: #00331b;
+    border-radius: 5px;
+    width: fit-content;
+    transition: 0.2s;
+    padding: 5px;
+}
+summary::-webkit-details-marker{
+    display: none; /*一部ブラウザ向け*/
+}
+details[open] summary{
+    background-color: #004d29;
+}
+
+summary:hover{
+    background-color: #004d29;
+}
+.content{
+    animation-name: fadein;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+    padding: 7.5px; /*上右下左*/
+}
+@keyframes fadein{
+    0%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.bold{
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.mark{
+    font-weight: 600;
+    background: linear-gradient(transparent 70%, #9ad6a9 70%);
+    padding-bottom: 0.2em;
+}
+
+@media (prefers-color-scheme: dark){
+    .mark{
+        background: linear-gradient(transparent 70%, #004d29 70%);
+    }
+}
+
+main ul{
+    margin: 0;
+}
+
+.margin-bottom{
+    margin-bottom: 15px;
+}
