@@ -87,9 +87,9 @@ main ul{
 
 @media screen and (max-width: 767px){
     .pdf{ /*暫定処置*/
-        height: 90px;
+        height: 110px;
     }
     .pdf1{
-        height: 55px;
+        height: 85px;
     }
 }
