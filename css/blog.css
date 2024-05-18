@@ -1,15 +1,19 @@
 :root{
     --marker: "#9ad6a9";
+    --detail-bg: #dae6d8;
+    --detail-bg-hover: #92d69e;
 }
 
 @media (prefers-color-scheme: dark){
     :root{
         --marker: "#088247";
+        --detail-bg: #00331b;
+        --detail-bg-hover: #004d29;
     }
 }
 
 details{
-    background-color: #00331b;
+    background-color: var(--detail-bg);
     border-radius: 5px;
     width: fit-content;
     margin-top: 15px;
@@ -20,7 +24,7 @@ summary{
     list-style: none;
     display: flex;
     align-items: center;
-    background-color: #00331b;
+    background-color: var(--detail-bg);
     border-radius: 5px;
     width: fit-content;
     transition: 0.2s;
@@ -30,11 +34,11 @@ summary::-webkit-details-marker{
     display: none; /*一部ブラウザ向け*/
 }
 details[open] summary{
-    background-color: #004d29;
+    background-color: var(--detail-bg-hover);
 }
 
 summary:hover{
-    background-color: #004d29;
+    background-color: var(--detail-bg-hover);
 }
 .content{
     animation-name: fadein;
