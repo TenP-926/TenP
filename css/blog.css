@@ -84,3 +84,12 @@ main ul{
 .margin-right{
     margin-right: 10px;
 }
+
+@media screen and (max-width: 767px){
+    .pdf{ /*暫定処置*/
+        height: 90px;
+    }
+    .pdf1{
+        height: 55px;
+    }
+}
