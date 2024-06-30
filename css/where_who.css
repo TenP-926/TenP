@@ -1,0 +1,65 @@
+/*:root{
+    --error: #c50500;
+}
+@media (prefers-color-scheme: dark){
+    :root{
+        --error: #fff000;
+    }
+}*/
+
+#place p,#ip-content p,#ua-content p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+#place, #ip-content,#ua-content{
+    background-color: var(--greenbg); /*#d6e9ca*/
+    border-radius: 15px;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.flex, .info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.info{
+    margin-top: 10px;
+}
+#infoicon{
+    font-size: 24px;
+}
+.right-float{
+    float: right;
+}
+.error-content{
+    display: flex;
+    align-items: center;
+}
+#errormsg{
+    color: var(--error);
+    font-size: 20px;
+    font-weight: 600;
+}
+#relord{
+    cursor: pointer;
+}
+#relord,#relordmsg{
+    font-size: 20px;
+    font-weight: 600;
+}
+#gmap{
+    margin-right: 10px;
+}
+button{
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 16px;
+}
+#margin-top{
+    margin-top: 15px;
+}

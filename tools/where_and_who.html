@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ここはどこで私は誰だか分からなくなった時に見るサイト。日常的に分からなくなる方はブックマークをおすすめします">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/where_who.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-16x16.png">
+    <link rel="manifest" href="../icon/manifest.json">
+    <link rel="mask-icon" href="../icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icon/apple-touch-icon.png">
+    <!-- https://realfavicongenerator.net/ -->
+    <script src="../scripts/where.js"></script>
+    <script src="../scripts/who.js"></script>
+    <script src="../scripts/platform.js"></script>
+    <title>ここはどこ?私は誰? | TenP</title>
+</head>
+<body>
+<!--共通header-->
+<header>
+    <p class="header-TenP"><a href="../index.html">点P</a></p>
+    <nav>
+    <ul>
+        <li><a href="../blog/index.html">ブログ</a></li>
+        <li><a href="index.html">物置</a></li>
+        <li><a href="../about/profile.html">プロフィール</a></li>
+        <li><a href="../about/about_site.html">サイトについて</a></li>
+    </ul>
+    </nav>
+</header>
+<!--//共通header-->
+<main>
+<!-- ぱんくず -->
+<div class="breadcrumbs">
+    <a href="../index.html"><span class="material-symbols-outlined">home</span></a>
+    <div class="right-arrow">
+        <span><a href="../index.html">ホーム</a></span><span><a href="index.html">物置</a></span>
+        ここはどこ?私は誰?
+    </div>
+</div>
+<!-- //ぱんくず -->
+<h1 class="title">ここはどこ?私は誰?</h1>
+<p>ここはどこで私は誰だか分からなくなった時に見るサイト。日常的に分からなくなる方はブックマークをおすすめします</p>
+<h2>ここはどこか</h2>
+<div class="error-content"><span class="material-symbols-outlined" id="erroricon"></span><span id="errormsg"></span></div>
+<div class="error-content"><span class="material-symbols-outlined" id="relordicon"></span><a id="relord" onclick="window.location.reload();"></a><span id="relordmsg"></span></div>
+<p id="hoge"></p>
+<div id="where">
+<p class="text-bold">あなたの位置情報:</p>
+<div id="place">
+    <p>緯度: <span id="idohtml">取得中です...</span></p>
+    <p>経度: <span id="keidohtml">取得中です...</span></p>
+    <p><span id="koudohtml"></span></p>
+    <p id="hougakuhtml"></p>
+    <p id="speedhtml"></p>
+</div>
+<span class="flex"><span class="material-symbols-outlined">pin_drop</span><a class="text-bold" id="gmap" target="_blank">取得中です...</a><span class="material-symbols-outlined">content_copy</span><button id="btn">コピー</button></span>
+<span class="info"><span class="material-symbols-outlined" id="infoicon">info</span><span id="seidohtml">取得中です...</span><span id="koudoseidohtml"></span><span id="timehtml"></span></span>
+</div>
+<h2>あなたは誰か</h2>
+<p>あなたが正確に誰だかは分かりませんが、少しなら分かります。あなたはこんな人です</p>
+<p class="text-bold">＊IPアドレスとそれからわかる情報</p>
+<div id="ip-content">
+    <p id="ipadress"></p>
+    <p id="hostname"></p>
+    <p id="loc"></p>
+    <p id="org"></p>
+</div>
+<span class="flex"><span class="material-symbols-outlined">pin_drop</span><a class="text-bold" id="ipgmap" target="_blank">取得中です...</a><span class="material-symbols-outlined">content_copy</span><button id="ipbtn">コピー</button></span>
+<p class="text-bold" id="margin-top">＊ユーザーエージェントからの情報(後日追加予定)</p>
+<div id="ua-content">
+    <p id="os"></p>
+    <p id="browsername"></p>
+    <p id="browserver"></p>
+</div>
+<span class="flex"><span class="material-symbols-outlined">content_copy</span><button id="uabtn">コピー</button></span>
+
+
+<div class="link-bottom">
+            <a href="index.html"><span class="material-symbols-outlined">arrow_back</span></a><a class="margin-right" href="index.html">物置トップページに戻る</a>
+            <a href="../index.html"><span class="material-symbols-outlined">home</span></a>
+            <a href="../index.html"><p class="link-text">ホームに戻る</p></a>
+        </div>
+</main>
+<!--共通footer-->
+<footer>
+<div class="ul">
+<ul class="footer-ul1">
+    <li><a href="../index.html">ホーム</a></li>
+    <li><a href="../blog/index.html">ブログ</a></li>
+    <li><a href="index.html">物置</a></li>
+    <li><a href="../about/profile.html">プロフィール</a></li>
+    <li><a href="../about/about_site.html"><span>このサイトに</span><span>ついて</span></a></li>
+</ul>
+<ul class="footer-ul2">
+    <li><a href="https://twitter.com/Num_k_" target="_blank" rel="noopener noreferrer">Twitter(自称:X)</a></li>
+    <li><a href="https://github.com/TenP-926" target="_blank" rel="noopener noreferrer">Github</a></li>
+    <li>Discord @TenP_256</li>
+</ul>
+<ul class="footer-ul3">
+    <li><a href="../terms.html">利用規約</a></li>
+    <li><a href="../privacy_policy.html"><span>プライバシー</span><span>ポリシー</span></a></li>
+    <li><a href="https://forms.gle/pWLFzmYX31TLPBAv9" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
+</ul>
+</div>
+<p class="footer-end">© 2024 点P All rights reserved.</p>
+</footer>
+<!--//共通footer-->
+</body>
+</html>

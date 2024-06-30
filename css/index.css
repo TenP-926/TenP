@@ -194,6 +194,7 @@ h2{
     justify-content: center;
     height: 150px;
     width: 100%;
+    border-radius: 15px;
 }
 
 @media screen and (max-width: 767px){

@@ -1,6 +1,7 @@
 /* サイトトップページ(index.html)以外でほぼ共通して使えそうなCSSをまとめた */
 /* 物置の作品以外はこれでいけそう */
 .material-symbols-outlined {
+    -webkit-user-select: none; /*Safari用*/
     user-select: none;
     color: #000000;
     font-size: 27px;
@@ -19,6 +20,7 @@
 
 /*ダークモード関連*/
 :root{
+    --error: #c50500;
     --main-text: #000000;
     --main-atagcolor: #0033cc;
     --atagcolor2: #0033cc;
@@ -27,9 +29,12 @@
     --note-bg: #f5deb3;
     --note-dark-bg: #d7eaf8;
     --red: #b22222;
+    --code: #f2f1f1;
+    --greenbg: #d6e9ca;
 }
 @media (prefers-color-scheme: dark){
     :root{
+        --error: #fff000;
         --main-text: #e3e3e3;
         --main-atagcolor: #3ea6ff;
         --atagcolor2: #75b6e7;
@@ -38,6 +43,8 @@
         --note-bg: #004173;
         --note-dark-bg: #091f2c;
         --red: #ff4500;
+        --code: #343434;
+        --greenbg: #003300;
     }
 }
 
@@ -140,17 +147,31 @@ main p{
     font-weight: 600;
     font-size: 40px;
     padding-bottom: 5px;
-    margin: 0px;
+    margin: 0;
+    margin-bottom: 10px;
     border-bottom: 4px solid hsl(166, 100%, 22%);
 }
 
-main h2{
+h2{
     border-left: 7px solid #00a381;
     border-bottom: 1px solid var(--h2);
     padding-left: 10px;
     padding-top: 7.5px;
     font-size: 30px;
+    font-weight: 550;
+    margin: 15px 0 15px 0;
+}
+
+h3{
+    margin: 10px 0 10px 0;
+    font-size: 25px;
     font-weight: 500;
+}
+
+h4{
+    margin: 0;
+    font-weight: 600;
+    font-size: 17px;
 }
 
 main li{
@@ -171,6 +192,7 @@ main a:hover, .home-a:hover{
 
 .note{
     border-radius: 15px;
+    width: -moz-fit-content;
     width: fit-content;
     background-color: var(--note-bg);
 }
@@ -178,6 +200,7 @@ main a:hover, .home-a:hover{
 .dark-note{
     background-color: var(--note-dark-bg);
     border-radius: 10px;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -272,4 +295,12 @@ figure{
 }
 figure{
     margin-bottom: 15px;
+}
+
+code{
+    background-color: var(--code);
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
+    margin: 0 5px 0 5px;
+    font-family: "Consolas", 'BIZ UDPゴシック', monospace;
 }
