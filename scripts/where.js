@@ -1,5 +1,4 @@
 //概要:現在位置をgeolocationで取得し表示
-
 //windowが読み込まれたら実行
 window.onload = function(){
     const getpos = document.getElementById("getposbtn")
@@ -9,9 +8,9 @@ window.onload = function(){
 
 function getposition(){
     const getpos = document.getElementById("getposbtn")
-    getpos.remove();
+    getpos.style.display = "none";
     where.style.display = "block";
-    
+
     const options={
         timeout: 15000 //15s
     };
@@ -27,6 +26,7 @@ function getposition(){
 }
 //成功した時の処理
 function success(position){
+    errors.remove();
     //const gmap = document.getElementById("gmap")
     // メモ:国土地理院API使って緯度経度から標高がわかるを実装したい https://maps.gsi.go.jp/development/elevation_s.html https://qiita.com/PearlEarringMinion/items/f4e27f00b61262d22630#国土地理院apiの活用
     const ido = position.coords.latitude;
@@ -86,11 +86,13 @@ function success(position){
 function error(error){
     //where = document.getElementById("where")
     //GeolocationPositionError.message
-    where.remove();
+    const getpos = document.getElementById("getposbtn")
+    getpos.style.display = "block";
+    where.style.display = "none"
     erroricon.textContent = "dangerous";
     relordicon.textContent = "update";
-    relord.textContent = "再読み込み";
-    relordmsg.textContent = "して再試行します";
+    //relord.textContent = ""; ###消す###
+    relordmsg.textContent = "上のボタンを押して再試行します";
     const errorcode = error.code;
     console.error("位置情報を取得できませんでした。以下にエラー情報を示します", error)
     switch(error.code){
