@@ -8,6 +8,10 @@ window.onload = function(){
 }
 
 function getposition(){
+    const getpos = document.getElementById("getposbtn")
+    getpos.remove();
+    where.style.display = "block";
+    
     const options={
         timeout: 15000 //15s
     };
@@ -23,9 +27,6 @@ function getposition(){
 }
 //成功した時の処理
 function success(position){
-    const getpos = document.getElementById("getposbtn")
-    getpos.remove();
-    where.style.display = "block";
     //const gmap = document.getElementById("gmap")
     // メモ:国土地理院API使って緯度経度から標高がわかるを実装したい https://maps.gsi.go.jp/development/elevation_s.html https://qiita.com/PearlEarringMinion/items/f4e27f00b61262d22630#国土地理院apiの活用
     const ido = position.coords.latitude;
