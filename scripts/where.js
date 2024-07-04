@@ -1,20 +1,30 @@
 //概要:現在位置をgeolocationで取得し表示
 
-const options={
-    timeout: 15000 //15s
-};
-
-if ("geolocation" in navigator){
-    navigator.geolocation.getCurrentPosition(success,error,options)
-}
-else{
-    where.remove();
-    console.error("Geolocation APIが利用できないため位置情報を取得できません。")
-    errormsg.textContent = "位置情報APIが利用できません。"
+//windowが読み込まれたら実行
+window.onload = function(){
+    const getpos = document.getElementById("getposbtn")
+    getpos.style.visibility = "visible"
+    getpos.addEventListener("click", getposition)
 }
 
+function getposition(){
+    const options={
+        timeout: 15000 //15s
+    };
+
+    if ("geolocation" in navigator){
+        navigator.geolocation.getCurrentPosition(success,error,options)
+    }
+    else{
+        where.remove();
+        console.error("Geolocation APIが利用できないため位置情報を取得できません。")
+        errormsg.textContent = "位置情報APIが利用できません。"
+    }
+}
 //成功した時の処理
 function success(position){
+    const getpos = document.getElementById("getposbtn")
+    getpos.remove();
     //const gmap = document.getElementById("gmap")
     // メモ:国土地理院API使って緯度経度から標高がわかるを実装したい https://maps.gsi.go.jp/development/elevation_s.html https://qiita.com/PearlEarringMinion/items/f4e27f00b61262d22630#国土地理院apiの活用
     const ido = position.coords.latitude;
@@ -38,7 +48,7 @@ function success(position){
     koudohtml.textContent = koudo;
     hougakuhtml.textContent = hougaku;
     speedhtml.textContent = speed;
-
+    where.style.display = "block";
     seidohtml.textContent = "緯度経度の誤差:" + seido + "m以内、";
     timehtml.textContent = convert;
     if (koudo != null){

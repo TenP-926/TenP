@@ -14,6 +14,7 @@ fetch("https://ipinfo.io?callback")
         ipgmap.textContent = "Googleマップで見る";
 
         const ipcontent = document.getElementById("ip-content")
+        console.log(ipcontent)
         const iptxt = ipcontent.innerText;
         const ipcopytxt = iptxt.replace(/\r?\n/g," ")
         ipbtn.addEventListener("click",() =>{

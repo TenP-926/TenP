@@ -31,6 +31,8 @@
     --red: #b22222;
     --code: #f2f1f1;
     --greenbg: #d6e9ca;
+    --bluebtn: #83c3f7;
+    --bluebtn-hover: #4b9fea;
 }
 @media (prefers-color-scheme: dark){
     :root{
@@ -45,6 +47,8 @@
         --red: #ff4500;
         --code: #343434;
         --greenbg: #003300;
+        --bluebtn: #212c6f;
+        --bluebtn-hover: #121858;
     }
 }
 
