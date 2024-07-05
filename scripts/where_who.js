@@ -1,10 +1,8 @@
-//概要: IPアドレスやuser-agentからできる限りユーザーの動作環境を表示
-
-//ipinfo.io よりipアドレスとそれから得られる情報
 document.addEventListener("DOMContentLoaded",getipinfo)
 document.addEventListener("DOMContentLoaded",getendpoint)
 document.addEventListener("DOMContentLoaded",getpos)
 
+//ipinfo.io よりipアドレスとそれから得られる情報
 async function getipinfo(){
 await fetch("https://ipinfo.io?callback")
     .then(res => res.json())
@@ -20,6 +18,7 @@ await fetch("https://ipinfo.io?callback")
     })
 }
 
+//ユーザー環境に関する情報を表示
 async function getendpoint(){
     const ipcontent = document.getElementById("ip-content")
     console.log(ipcontent)
@@ -47,8 +46,7 @@ async function getendpoint(){
     })
 }
 
-//概要:現在位置をgeolocationで取得し表示
-//windowが読み込まれたら実行
+//現在位置をgeolocationで取得し表示
 async function getpos(){
     const getpos = document.getElementById("getposbtn")
     getpos.style.visibility = "visible"
@@ -73,7 +71,8 @@ async function getposition(){
         errormsg.textContent = "位置情報APIが利用できません。"
     }
 }
-//成功した時の処理
+
+//getpos:成功した時の処理
 function success(position){
     errors.remove();
     //const gmap = document.getElementById("gmap")
@@ -131,7 +130,7 @@ function success(position){
     //JS側で変数足し合わせたりしてコピーするテキスト作りたい! => あれ...いい変数がないな... => せや!innertextでhtmlに出力されてる文字列をコピーする脳死実装すればいいやん!!
 }
 
-//error時の処理
+//getpos:error時の処理
 function error(error){
     //where = document.getElementById("where")
     //GeolocationPositionError.message
