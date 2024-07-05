@@ -1,5 +1,6 @@
 /* このcssでcommon.cssのダークモード設定をオーバーライドする*/
 :root{
+    color-scheme: light;
     --header-bg: #d9e7cb;
     --header-text: #000000;
     --footer-bg: #e2e8d9;
