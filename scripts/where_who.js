@@ -1,13 +1,22 @@
+document.addEventListener("DOMContentLoaded",getipify)
 document.addEventListener("DOMContentLoaded",getipinfo)
 document.addEventListener("DOMContentLoaded",getendpoint)
 document.addEventListener("DOMContentLoaded",getpos)
+
+async function getipify(){
+    await fetch("https://api.ipify.org?format=json")
+    .then(res=>res.json())
+    .then(json=>{
+        ipadress.textContent = "IPアドレス: " + json.ip;
+    }
+    )
+}
 
 //ipinfo.io よりipアドレスとそれから得られる情報
 async function getipinfo(){
 await fetch("https://ipinfo.io?callback")
     .then(res => res.json())
     .then(json => {
-        ipadress.textContent = "IPアドレス: " + json.ip;
         hostname.textContent = "ホスト名: " + json.hostname;
         loc.textContent = "緯度,経度: " + json.loc;
         org.textContent = "事業者: " + json.org; 
@@ -21,7 +30,6 @@ await fetch("https://ipinfo.io?callback")
 //ユーザー環境に関する情報を表示
 async function getendpoint(){
     const ipcontent = document.getElementById("ip-content")
-    console.log(ipcontent)
     const iptxt = ipcontent.innerText;
     const ipcopytxt = iptxt.replace(/\r?\n/g," ")
     ipbtn.addEventListener("click",() =>{
@@ -46,14 +54,17 @@ async function getendpoint(){
     })
 }
 
-//現在位置をgeolocationで取得し表示
+//getpos:位置情報を取得し表示
+//これはボタン表示
 async function getpos(){
     const getpos = document.getElementById("getposbtn")
     getpos.style.visibility = "visible"
     getpos.addEventListener("click", getposition)
 }
 
+//getpos:ボタン押されたとき
 async function getposition(){
+    errors.style.display = "none"
     const getpos = document.getElementById("getposbtn")
     getpos.style.display = "none";
     where.style.display = "block";
@@ -66,9 +77,10 @@ async function getposition(){
         navigator.geolocation.getCurrentPosition(success,error,options)
     }
     else{
+        //geolocationに対応してない環境の人なんてきっといないよね！エラー処理手抜くよ！
         where.remove();
         console.error("Geolocation APIが利用できないため位置情報を取得できません。")
-        errormsg.textContent = "位置情報APIが利用できません。"
+        errormsg.textContent = "位置情報APIが利用できません。ブラウザやOS等が最新でない可能性があります。"
     }
 }
 
@@ -132,15 +144,15 @@ function success(position){
 
 //getpos:error時の処理
 function error(error){
+    errors.style.display = "block"
     //where = document.getElementById("where")
     //GeolocationPositionError.message
     const getpos = document.getElementById("getposbtn")
     getpos.style.display = "block";
     where.style.display = "none"
     erroricon.textContent = "dangerous";
-    relordicon.textContent = "update";
-    //relord.textContent = ""; ###消す###
-    relordmsg.textContent = "上のボタンを押して再試行します";
+    relordicon.textContent = "update"
+    retrymsg.textContent = "上のボタンを押して再試行します";
     const errorcode = error.code;
     console.error("位置情報を取得できませんでした。以下にエラー情報を示します", error)
     switch(error.code){

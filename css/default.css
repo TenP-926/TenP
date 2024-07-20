@@ -29,7 +29,7 @@
     --note-bg: #f5deb3;
     --note-dark-bg: #d7eaf8;
     --red: #b22222;
-    --code: #f2f1f1;
+    --code: #0000001a;
     --greenbg: #d6e9ca;
     --bluebtn: #83c3f7;
     --bluebtn-hover: #4b9fea;
@@ -169,13 +169,17 @@ h2{
 h3{
     margin: 10px 0 10px 0;
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 h4{
+    border-left: 8px solid #00a381;
     margin: 0;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 19px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 6px;
 }
 
 main li{
