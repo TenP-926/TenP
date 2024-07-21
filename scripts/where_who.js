@@ -25,17 +25,19 @@ await fetch("https://ipinfo.io?callback")
         ipgmap.setAttribute("href", ipmapurl)
         ipgmap.textContent = "Googleマップで見る";
     })
+    .then(() =>{
+        const ipcontent = document.getElementById("ip-content")
+        const iptxt = ipcontent.innerText;
+        const ipcopytxt = iptxt.replace(/\r?\n/g," ")
+        ipbtn.addEventListener("click",() =>{
+            navigator.clipboard.writeText(ipcopytxt);
+            ipbtn.textContent = "コピーしました！"
+        })
+    })
 }
 
 //ユーザー環境に関する情報を表示
 async function getendpoint(){
-    const ipcontent = document.getElementById("ip-content")
-    const iptxt = ipcontent.innerText;
-    const ipcopytxt = iptxt.replace(/\r?\n/g," ")
-    ipbtn.addEventListener("click",() =>{
-        navigator.clipboard.writeText(ipcopytxt);
-        ipbtn.textContent = "コピーしました！"
-    })
     const width = screen.width;
     const height = screen.height;
     const displaysize = width + "x" + height;
